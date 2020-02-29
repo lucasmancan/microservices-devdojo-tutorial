@@ -8,27 +8,46 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>course</artifactId>
+    <artifactId>discovery</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>course</name>
+    <name>discovery</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>
+        <jaxb.version>2.3.1</jaxb.version>
+        <javax-activation.version>1.1.1</javax-activation.version>
     </properties>
 
     <dependencies>
-
         <dependency>
-            <groupId>br.com.lucasmancan</groupId>
-            <artifactId>core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>${jaxb.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.activation/com.springsource.javax.activation -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>${javax-activation.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>
-        <finalName>course</finalName>
+        <finalName>discovery</finalName>
 
         <plugins>
             <plugin>
@@ -50,4 +69,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
